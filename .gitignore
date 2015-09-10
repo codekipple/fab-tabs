@@ -1,0 +1,18 @@
+#### Node modules ####
+
+    # Due to many issues with NPM modules it is a good idea to commit the node_modules folder.
+    # Unfortunately it's not as simple as simply as adding the node_modules folder to source control.
+    # When an npm module is built it is built in a platform specific way which means it builds different for (linux, OSX, windows)
+    # When installing a node module use this command `npm install --ignore-scripts my-npm-module`
+    # This Adds the module without building it, commit that and then run `npm rebuild`
+    # After the rebuild do a git status and any extra files that show up need to be added to the gitignore.
+    # See this url for explanation http://www.letscodejavascript.com/v3/blog/2014/03/the_npm_debacle (option 1 half way down the page)
+
+node_modules/browser-sync/node_modules/chokidar/node_modules/fsevents/build/
+node_modules/browser-sync/node_modules/socket.io/node_modules/engine.io/node_modules/ws/node_modules/bufferutil/build/
+node_modules/browser-sync/node_modules/socket.io/node_modules/engine.io/node_modules/ws/node_modules/utf-8-validate/build/
+node_modules/browser-sync/node_modules/socket.io/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/bufferutil/build/
+node_modules/browser-sync/node_modules/socket.io/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/utf-8-validate/build/
+node_modules/gulp-sass/node_modules/node-sass/vendor/
+node_modules/watchify/node_modules/chokidar/node_modules/fsevents/build/
+#### END: Node modules ####

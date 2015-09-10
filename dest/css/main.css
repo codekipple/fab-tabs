@@ -1,0 +1,59 @@
+/*  ==========================================================================
+    Fab Tabs
+    ==========================================================================
+*/
+.c-tabs__tabpanel[aria-hidden="true"] {
+  /*
+            If you are using a js class on your HTML element you can uncomment
+            this bit of code so the tab areas work nicely without js turned on.
+            http://stackoverflow.com/questions/6724515/what-is-the-purpose-of-the-html-no-js-class
+        */
+  display: none;
+}
+
+.c-tabs__tablist {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.c-tabs__tablist li {
+  float: left;
+  margin: 0 10px 0 0;
+}
+
+.c-tabs__tablist a {
+  display: block;
+}
+
+/*  ==========================================================================
+    Top:Layout
+    ========================================================================== */
+/*
+    Contain floats
+    --------------
+
+    Make an element expand to contain floated children.
+    Uses pseudo-elements (micro clearfix).
+
+    1. The space content is one way to avoid an Opera bug when the
+        `contenteditable` attribute is included anywhere else in the document.
+        Otherwise it causes space to appear at the top and bottom of the
+        element.
+    2. The use of `table` rather than `block` is only necessary if using
+        `:before` to contain the top-margins of child elements.
+ */
+.u-cf:before,
+.u-cf:after,
+.u-group:before,
+.u-group:after {
+  content: "";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+
+.u-cf:after,
+.u-group:after {
+  clear: both;
+}

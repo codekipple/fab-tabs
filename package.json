@@ -1,0 +1,23 @@
+{
+  "name": "fab-tabs",
+  "version": "0.0.1",
+  "description": "Js tab component, currently relies on jQuery.",
+  "main": "dest/js/fancytabs.js",
+  "dependencies": {
+    "jquery": "^1.11.3"
+  },
+  "devDependencies": {
+    "autoprefixer-core": "^5.2.1",
+    "browser-sync": "^2.8.2",
+    "gulp": "^3.9.0",
+    "gulp-postcss": "^6.0.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.0.4",
+    "gulp-uglify": "^1.4.0",
+    "require-dir": "^0.3.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Carl Hughes (@codekipple)"
+}

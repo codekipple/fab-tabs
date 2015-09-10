@@ -1,0 +1,34 @@
+/*  ==========================================================================
+    Fab Tabs
+    ==========================================================================
+*/
+
+// .c-tabs {}
+
+.c-tabs__tabpanel {
+    &[aria-hidden="true"] {
+        /*
+            If you are using a js class on your HTML element you can uncomment
+            this bit of code so the tab areas work nicely without js turned on.
+            http://stackoverflow.com/questions/6724515/what-is-the-purpose-of-the-html-no-js-class
+        */
+        // .js & {
+            display: none;
+        // }
+    }
+}
+
+.c-tabs__tablist {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+        float: left;
+        margin: 0 10px 0 0;
+    }
+
+    a {
+        display: block;
+    }
+}
