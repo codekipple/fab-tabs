@@ -45,6 +45,8 @@ if (!Date.now) {
 
     };
 
+    // TODO: enable the use of the tabs without js (urls for tabs)
+
     init = function(elements, options) {
         if (options) {
             $.extend(settings, options);
@@ -59,6 +61,7 @@ if (!Date.now) {
             /*
                 filters out data-fabtabs=false to allow a link in the list not
                 to be a tab
+                TODO: This needs to be handled better as it breaks tabbing
             */
             var $tabs = $tablist.find('a').not('[data-fabtabs="false"]');
 
@@ -75,12 +78,6 @@ if (!Date.now) {
                 $(this).attr(
                     'aria-controls', $(this).attr('href').substring(1)
                 );
-            });
-
-            // Make the first tab selected by default and allow it focus
-            $tablist.find('li:first-child a').attr({
-                'aria-selected' : 'true',
-                'tabindex' : '0'
             });
 
             // Make each section focusable and give it the tabpanel role
@@ -129,6 +126,8 @@ if (!Date.now) {
                 event.preventDefault();
             });
 
+            // Select first tab by default
+            selectTab($container, $tabs.index(0));
         });
     }
 
