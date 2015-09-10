@@ -1,0 +1,26 @@
+/*  ==========================================================================
+    Base:Main
+    ========================================================================== */
+
+/*
+    1. Prevent iOS and IE text size adjust after device orientation change, without disabling
+       without disabling user zoom. - Normalize:v3.0.3
+*/
+html {
+    -webkit-text-size-adjust: 100%; /* 1 */
+    -ms-text-size-adjust: 100%; /* 1 */
+    font-size: em($fs--base, $fs--browser-default);
+    font-family: $ff--main;
+}
+
+/*
+    1. Remove default margin. - Normalize:v3.0.3
+*/
+body {
+    margin: 0; /* 1 */
+    color: $color-body;
+    line-height: 1.4;
+    max-width: 500px;
+    margin: 0 auto;
+    padding-top: em(30px);
+}

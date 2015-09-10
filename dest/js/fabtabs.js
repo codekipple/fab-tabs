@@ -57,10 +57,10 @@ if (!Date.now) {
                 $tabPanels = $container.children('.c-tabs__tabpanel');
 
             /*
-                filters out data-tabs=false to allow a link in the list not
+                filters out data-fabtabs=false to allow a link in the list not
                 to be a tab
             */
-            var $tabs = $tablist.find('a').not('[data-tabs="false"]');
+            var $tabs = $tablist.find('a').not('[data-fabtabs="false"]');
 
             $tablist.attr('role','tablist');
             $tablist.find('li').attr('role','presentation');
@@ -70,7 +70,7 @@ if (!Date.now) {
                 'tabindex' : '-1'
             });
 
-            // Make each aria-controls correspond id of targeted section (re href)
+            // Make each aria-controls correspond to id of targeted section (re href)
             $tabs.each(function() {
                 $(this).attr(
                     'aria-controls', $(this).attr('href').substring(1)
